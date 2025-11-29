@@ -1,0 +1,248 @@
+/* Reset & General */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+a {
+  color: #0275d8;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 56px;
+  z-index: 1000;
+}
+.nav-left,
+.nav-center,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-left span.logo {
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav-center a {
+  margin: 0 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.nav-right {
+  gap: 12px;
+  position: relative;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 8px 0;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #333;
+}
+.dropdown-content a:hover {
+  background: #f0f0f0;
+}
+
+/* Layout */
+main {
+  display: flex;
+  max-width: 1200px;
+  margin: 16px auto;
+  gap: 24px;
+}
+.news-feed {
+  width: 80%;
+}
+.aside {
+  width: 20%;
+}
+
+/* News Cards */
+.post-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.post-header img.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.post-header .user-info {
+  font-size: 14px;
+  font-weight: 600;
+}
+.post-header .post-time {
+  font-size: 12px;
+  color: #666;
+  margin-left: 8px;
+}
+.post-content {
+  margin: 12px 0;
+  font-size: 15px;
+}
+.post-link {
+  color: #0275d8;
+  word-break: break-word;
+}
+.post-image {
+  margin-top: 12px;
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: #555;
+  margin-top: 12px;
+}
+.post-actions span {
+  cursor: pointer;
+}
+.follow-btn {
+  background: #4a90e2;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Aside User Profile */
+.user-profile {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.user-profile img.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+.user-profile h2 {
+  margin: 8px 0 4px;
+  font-size: 20px;
+}
+.user-profile p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Friends list */
+.friends-list {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.friends-list h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+.friends-list .friend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.friends-list .friend img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.friends-list .friend .friend-info {
+  font-size: 14px;
+}
+.friends-list .friend .friend-info strong {
+  display: block;
+}
+
+/* Hashtag in posts */
+.hashtag {
+  color: #0275d8;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 12px 8px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media(max-width: 850px) {
+  main {
+    flex-direction: column;
+    max-width: 90vw;
+  }
+  .news-feed, .aside {
+    width: 100%;
+  }
+  .nav-center a {
+    margin: 0 4px;
+    font-size: 12px;
+  }
+}
